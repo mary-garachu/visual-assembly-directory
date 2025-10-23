@@ -39,3 +39,27 @@ function vad_register_custom_post_type() {
     register_post_type( 'visual_assembly', $args );
 }
 add_action( 'init', 'vad_register_custom_post_type' );
+
+// Enqueue plugin stylesheet
+function vad_enqueue_styles() {
+    wp_enqueue_style(
+        'vad-styles',
+        plugin_dir_url(__FILE__) . 'assets/css/style.css',
+        array(),
+        '1.0'
+    );
+}
+add_action('wp_enqueue_scripts', 'vad_enqueue_styles');
+
+// Load plugin archive template for Visual Assembly CPT
+function vad_load_archive_template($template) {
+    if (is_post_type_archive('visual_assembly')) {
+        $plugin_template = plugin_dir_path(__FILE__) . 'templates/archive-visual_assembly.php';
+        if (file_exists($plugin_template)) {
+            return $plugin_template;
+        }
+    }
+    return $template;
+}
+add_filter('archive_template', 'vad_load_archive_template');
+
