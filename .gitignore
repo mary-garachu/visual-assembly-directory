@@ -48,7 +48,7 @@ wp-content/db.php
 #!wp-content/uploads/maxmegamenu/
 
 # Plugin specific
-#!wp-content/plugins/visual-assembly-directory/*
+!wp-content/plugins/visual-assembly-directory
 
 # WP Engine specific
 .smushit-status
@@ -108,6 +108,7 @@ wp-content/mu-plugins/wpe-wp-sign-on-plugin*
 /wp-content/themes/index.php
 /wp-content/plugins/index.php
 /wp-content/plugins/akismet*
+!/wp-content/themes/twentytwentyfour
 
 # Large/disallowed file types
 # a CDN should be used for these
