@@ -4,6 +4,7 @@
  * Description: A simple plugin that registers a custom post type "visual_assembly" and displays posts in a directory layout.
  * Version: 1.0
  * Author: Sonie
+ * Author URI: https://mary-garachu.netlify.app/
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
