@@ -1,0 +1,46 @@
+.events-feed {
+  max-width: 900px !important;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: system-ui, sans-serif;
+}
+
+.events-feed h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .events-feed {
+    max-width: 100%;
+    margin: 20px auto;
+  }
+  .events-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+.event-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.event-card h3 {
+  margin-top: 0;
+  color: #333;
+}
